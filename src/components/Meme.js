@@ -21,7 +21,7 @@ export default function Meme(){
         axios.get(`https://meme-api.herokuapp.com/gimme/wholesomememes/50`)
          .then(res => setAllMemes(res.data))
     },[])
-    console.log(allMemes);
+  
 
     return(
         <main>
@@ -40,38 +40,3 @@ export default function Meme(){
     
 
 }
-
-// export default function Counter(){
-
-//     const [state, setState] = React.useState(["Hi 1"]);
-
-//     function addCount(){
-//         setState((prevState) => {
-//             let arr = [...prevState];
-//             arr.push(`Hi ${arr.length + 1}`);
-//             return arr;
-//             // return [...prevState, `Hi ${prevState.length + 1}`];
-//         })
-//     }
-
-//     function removeCount(){
-//         setState((prevState) => {
-//             let arr = [...prevState];
-//             arr.pop();
-//             return arr;
-//         })
-//     }
-
-//     const update = state.map(i => <p>{i}</p>)
-
-//     return (
-//         <div className="counter" style={{textAlign : "center"}}>
-//             <button className="minus" style={{height : "40px", width : "90px", backgroundColor : "aqua"}} onClick={addCount}>+</button> 
-//             <button className="minus" style={{height : "40px", width : "90px", backgroundColor : "aqua"}} onClick={removeCount}>-</button>
-
-//             <div className="count">
-//                 {update}
-//             </div>
-//         </div>
-//     )
-// }
